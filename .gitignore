@@ -1,0 +1,17 @@
+# Frontend
+frontend/node_modules
+frontend/dist
+frontend/build
+
+# Backend
+backend/node_modules
+
+# Environment Variables
+frontend/.env
+backend/.env
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
