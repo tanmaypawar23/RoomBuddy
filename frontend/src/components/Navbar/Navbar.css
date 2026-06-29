@@ -1,0 +1,81 @@
+.navbar {
+  /* border-bottom: 1px solid black; */
+  box-shadow: 1px 1px 5px gray;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.navbarLogo {
+  margin-left: 1rem;
+}
+.logoName {
+  margin-left: 1rem;
+}
+
+/* MenuLink */
+.navbarMenulink {
+  margin: 1rem;
+}
+
+/* Navbar MenuLink */
+.navbarMenulink {
+  text-decoration: none;
+  color: rgb(9, 21, 52);
+  font-weight: 450;
+}
+.navbarMenulink:hover {
+  color: rgb(76, 124, 246);
+  padding-bottom: 0.2rem;
+  border-bottom: 3px solid rgb(76, 124, 246);
+}
+
+/* Navbar button */
+.navbar-button {
+  margin-right: 1rem;
+}
+.signup-buttton {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2.3rem;
+  border: none;
+  border-radius: 3rem;
+  color: white;
+  background-color: rgb(76, 124, 246);
+  margin-left: 1rem;
+}
+.signup-buttton:hover {
+  height: 2.3rem;
+  box-shadow: 0px 1px 5px grey;
+}
+
+.login-buttton {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2.3rem;
+  border: none;
+  border-radius: 3rem;
+  color: white;
+  background-color: rgb(9, 21, 52);
+  margin-left: 1rem;
+}
+.login-buttton:hover {
+  height: 2.3rem;
+  box-shadow: 0px 1px 5px grey;
+}
+.createRequet-button {
+  color: rgb(9, 21, 52);
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.createRequet-button:hover {
+  box-shadow: 0px 1px 5px grey;
+}
