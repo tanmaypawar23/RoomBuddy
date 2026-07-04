@@ -1,12 +1,11 @@
 .footer {
   background-color: #091534;
   color: #ffffff;
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0; */
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+
   padding-top: 2rem;
 }
 a {

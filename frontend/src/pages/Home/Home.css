@@ -1,0 +1,112 @@
+/* Hero Section */
+.tagLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #091534;
+  min-height: 400px;
+}
+
+/* Common section spacing */
+.section {
+  padding: 5rem 0;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.3;
+  color: #091534;
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #091534;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+.second-content {
+  padding: 1rem 2rem;
+}
+
+.second-content p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Images */
+.home-bg-img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .tagLine {
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .second-content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .second-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .home-bg-img {
+    margin-bottom: 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .second-content {
+    padding: 0.5rem;
+  }
+
+  .second-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .home-bg-img {
+    border-radius: 10px;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+}
