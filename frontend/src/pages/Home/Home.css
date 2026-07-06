@@ -43,10 +43,26 @@ h2 {
 /* Images */
 .home-bg-img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 2rem;
   display: block;
 }
 
+.createRequest-home {
+  background-color: #091534;
+  color: white;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 2.5rem;
+  margin-top: 3rem;
+}
+
+.benfits-section {
+  background-color: #091534;
+  color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+}
 /* Tablet */
 @media (max-width: 991px) {
   .tagLine {

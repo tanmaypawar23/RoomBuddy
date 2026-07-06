@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="col">
             <p>Contact</p>
             <a href="">
-              <i class="fa-solid fa-envelope"></i> tanmaypawar230705@gmail.com
+              <i class="fa-solid fa-envelope"></i>tanmaypawar230705@gmail.com-
             </a>
             <br />
             <a href="">
