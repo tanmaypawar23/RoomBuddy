@@ -15,3 +15,5 @@ backend/.env
 
 # OS Files
 .DS_Store
+
+id_pass.txt
