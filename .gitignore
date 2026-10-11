@@ -17,3 +17,5 @@ backend/.env
 .DS_Store
 
 id_pass.txt
+
+RoomBuddy-MERN-Blueprint.md
