@@ -3,8 +3,9 @@ import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import logoName from "../../assets/logo_name.png";
 import add from "../../assets/add.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const router = useNavigate();
   return (
     <nav className="navbar">
       <div className="navbarLogo">
@@ -14,12 +15,18 @@ const Navbar = () => {
             alt="logo"
             style={{ width: "3rem" }}
             className="logo"
+            onClick={() => {
+              router("/");
+            }}
           />
           <img
             src={logoName}
             alt=""
             style={{ width: "9.5rem", height: "2rem" }}
             className="logoName"
+            onClick={() => {
+              router("/");
+            }}
           />
         </a>
       </div>
@@ -46,8 +53,12 @@ const Navbar = () => {
           />
           Create Request
         </a>
-        <button className="login-buttton">Login</button>
-        <button className="signup-buttton">SignUp</button>
+        <button className="login-buttton" onClick={() => router("/auth")}>
+          Login
+        </button>
+        <button className="signup-buttton" onClick={() => router("/auth")}>
+          SignUp
+        </button>
       </div>
     </nav>
   );

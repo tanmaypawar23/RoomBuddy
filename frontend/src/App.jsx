@@ -1,25 +1,21 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
-
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-// import Login from "./pages/Login";
+import Authentication from "./pages/authentication";
+import { AuthProvider } from "./contexts/AuthContext";
+import AllListing from "./pages/allListing";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Home />
-      <Footer />
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-      </Routes> */}
+      <BrowserRouter>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/auth" element={<Authentication />} />
+            <Route path="/allListing" element={<AllListing />} />
+          </Routes>
+        </AuthProvider>
+      </BrowserRouter>
     </>
   );
 }

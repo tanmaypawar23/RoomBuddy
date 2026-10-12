@@ -21,19 +21,19 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/tanmay-pawar-4a072b293/"
                 className="social-media-link"
               >
-                <i class="fa-brands fa-linkedin"></i>
+                <i className="fa-brands fa-linkedin"></i>
               </a>
               <a
                 href="https://github.com/tanmaypawar23"
                 className="social-media-link"
               >
-                <i class="fa-brands fa-github"></i>
+                <i className="fa-brands fa-github"></i>
               </a>
               <a href="" className="social-media-link">
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
               <a href="" className="social-media-link">
-                <i class="fa-brands fa-x-twitter"></i>
+                <i className="fa-brands fa-x-twitter"></i>
               </a>
             </div>
           </div>
@@ -61,12 +61,13 @@ const Footer = () => {
           <div className="col">
             <p>Contact</p>
             <a href="">
-              <i class="fa-solid fa-envelope"></i>tanmaypawar230705@gmail.com-
+              <i className="fa-solid fa-envelope"></i>
+              tanmaypawar230705@gmail.com-
             </a>
             <br />
             <a href="">
               {" "}
-              <i class="fa-solid fa-phone"></i>+91 9403281305
+              <i className="fa-solid fa-phone"></i>+91 9403281305
             </a>
             <br />
             <a href="">Pune, Maharashtra</a>
