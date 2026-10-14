@@ -34,7 +34,7 @@ const Navbar = () => {
         <a href="/" className="navbarMenulink">
           Home
         </a>
-        <a href="/" className="navbarMenulink">
+        <a href="/allListing" className="navbarMenulink">
           See Request
         </a>
         <a href="/" className="navbarMenulink">

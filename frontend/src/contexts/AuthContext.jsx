@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
 
       if (request.status === 200) {
         localStorage.setItem("token", request.data.token);
-        router("/");
+        router("/allListing");
       }
     } catch (err) {
       throw err;

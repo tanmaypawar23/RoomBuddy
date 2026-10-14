@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import users from "./routes/user.routes.js";
+import { Listings } from "./models/listing.models.js";
 
 dotenv.config();
 
@@ -16,16 +17,24 @@ app.use(express.json());
 
 app.use("/api/users", users);
 
-app.get("/home", (req, res) => {
-  return res.json({ hello: "world" });
+app.get("/allListings", async (req, res) => {
+  await Listings.find({})
+    .then((listings) => res.json(listings))
+    .catch((err) => res.json(err));
 });
 
-app.listen(PORT, async () => {
-  console.log(`App started on port ${PORT}`);
+const start = async () => {
   try {
     await mongoose.connect(uri);
     console.log(`Connected to DataBase! ${mongoose.connection.host}`);
+
+    app.listen(PORT, () => {
+      console.log(`App started on port ${PORT}`);
+    });
   } catch (error) {
     console.log("Database connection failed:", error);
+    process.exit(1);
   }
-});
+};
+
+start();
