@@ -45,7 +45,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-button">
-        <a href="/" className="createRequet-button">
+        <a href="/createListing" className="createRequet-button">
           <img
             src={add}
             alt="add"

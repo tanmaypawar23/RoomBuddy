@@ -133,11 +133,12 @@ export default function Authentication(props) {
             <FormControl>
               {fromState === 1 && (
                 <FormControl>
-                  <FormLabel htmlFor="name">Full Name</FormLabel>
                   <TextField
+                    margin="normal"
                     id="name"
                     name="name"
-                    placeholder="Your full name"
+                    label="Your Full Name"
+                    placeholder="eg.Tanmay Pawar"
                     autoComplete="name"
                     value={name}
                     required
@@ -146,12 +147,14 @@ export default function Authentication(props) {
                   />
                 </FormControl>
               )}
-              <FormLabel htmlFor="email">Email</FormLabel>
+
               <TextField
+                margin="normal"
                 id="email"
                 type="email"
                 name="email"
-                placeholder="your@email.com"
+                label="Email"
+                placeholder="eg.your@email.com"
                 autoComplete="email"
                 value={email}
                 autoFocus
@@ -162,12 +165,12 @@ export default function Authentication(props) {
               />
             </FormControl>
             <FormControl>
-              <FormLabel htmlFor="password">Password</FormLabel>
               <TextField
                 name="password"
                 placeholder="••••••"
                 type="password"
                 id="password"
+                label="Password"
                 autoComplete="current-password"
                 value={password}
                 autoFocus
