@@ -3,13 +3,15 @@ import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import logoName from "../../assets/logo_name.png";
 import add from "../../assets/add.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const router = useNavigate();
+  const isLoggedIn = localStorage.getItem("token");
   return (
     <nav className="navbar">
       <div className="navbarLogo">
-        <a href="">
+        <Link to="">
           <img
             src={logo}
             alt="logo"
@@ -28,37 +30,53 @@ const Navbar = () => {
               router("/");
             }}
           />
-        </a>
+        </Link>
       </div>
       <div className="navbarMenu">
-        <a href="/" className="navbarMenulink">
+        <Link to="/" className="navbarMenulink">
           Home
-        </a>
-        <a href="/allListing" className="navbarMenulink">
+        </Link>
+        <Link to="/allListing" className="navbarMenulink">
           See Request
-        </a>
-        <a href="/" className="navbarMenulink">
+        </Link>
+        <Link to="/" className="navbarMenulink">
           About Us
-        </a>
-        <a href="/" className="navbarMenulink">
+        </Link>
+        <Link to="/" className="navbarMenulink">
           Support
-        </a>
+        </Link>
       </div>
       <div className="navbar-button">
-        <a href="/createListing" className="createRequet-button">
-          <img
-            src={add}
-            alt="add"
-            style={{ width: "1rem", marginRight: "0.2rem" }}
-          />
-          Create Request
-        </a>
-        <button className="login-buttton" onClick={() => router("/auth")}>
-          Login
-        </button>
-        <button className="signup-buttton" onClick={() => router("/auth")}>
-          SignUp
-        </button>
+        {isLoggedIn ? (
+          <>
+            <Link to="/createListing" className="createRequet-button">
+              <img
+                src={add}
+                alt="add"
+                style={{ width: "1rem", marginRight: "0.2rem" }}
+              />
+              Create Request
+            </Link>
+            <button
+              className="login-buttton"
+              onClick={() => {
+                localStorage.removeItem("token");
+                router("/auth");
+              }}
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <button className="login-buttton" onClick={() => router("/auth")}>
+              Login
+            </button>
+            <button className="signup-buttton" onClick={() => router("/auth")}>
+              SignUp
+            </button>
+          </>
+        )}
       </div>
     </nav>
   );

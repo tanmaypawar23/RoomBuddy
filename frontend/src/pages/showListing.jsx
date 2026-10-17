@@ -7,8 +7,11 @@ import { Link, useParams } from "react-router-dom";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { useNavigate } from "react-router-dom";
+import withAuth from "../utils/withAuth";
 
-export default function ShowListing() {
+function ShowListing() {
+  const router = useNavigate();
   const [listing, setListing] = useState();
   const { id } = useParams();
 
@@ -17,7 +20,19 @@ export default function ShowListing() {
       .get("http://localhost:8080/allListings/" + id)
       .then((result) => setListing(result.data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
+
+  const handleDelete = () => {
+    axios
+      .delete("http://localhost:8080/deleteListing/" + id)
+      .then((res) => {
+        console.log(res);
+        router("/allListing", {
+          state: { message: "Listing deleted successfully!" },
+        });
+      })
+      .catch((err) => console.log(err));
+  };
 
   if (!listing) {
     return (
@@ -48,7 +63,12 @@ export default function ShowListing() {
           </Button>
         </Link>
 
-        <Button variant="outlined" color="error" startIcon={<DeleteIcon />}>
+        <Button
+          variant="outlined"
+          color="error"
+          startIcon={<DeleteIcon />}
+          onClick={handleDelete}
+        >
           Delete
         </Button>
       </div>
@@ -56,3 +76,5 @@ export default function ShowListing() {
     </>
   );
 }
+
+export default withAuth(ShowListing);

@@ -62,6 +62,13 @@ app.put("/updateListing/:id", (req, res) => {
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
+app.delete("/deleteListing/:id", (req, res) => {
+  const id = req.params.id;
+  Listings.findByIdAndDelete(id)
+    .then((listings) => res.json(listings))
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
+
 const start = async () => {
   try {
     await mongoose.connect(uri);

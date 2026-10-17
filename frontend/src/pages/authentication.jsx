@@ -107,7 +107,7 @@ export default function Authentication(props) {
             }}
           >
             <img
-              src="logo.png"
+              src="/logo.png"
               style={{ width: "60px", marginRight: "1rem" }}
             />
             <h2>RoomBuddy</h2>
@@ -173,7 +173,6 @@ export default function Authentication(props) {
                 label="Password"
                 autoComplete="current-password"
                 value={password}
-                autoFocus
                 required
                 fullWidth
                 variant="outlined"

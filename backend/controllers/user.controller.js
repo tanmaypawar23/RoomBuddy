@@ -12,7 +12,7 @@ const login = async (req, res) => {
   try {
     const isUserExist = await User.findOne({ email });
     if (!isUserExist) {
-      return res.status(404).json({ message: "User Not Found" });
+      return res.status(404).json({ message: "Invalid email or password" });
     }
 
     const isPasswordCorrect = await bcrypt.compare(
@@ -61,7 +61,7 @@ const signup = async (req, res) => {
 
     await newUser.save();
 
-    res.status(201).json({ message: "User SignUp Sccessfully!" });
+    res.status(201).json({ message: "User SignUp Successfully!" });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Something went Wrong" });
